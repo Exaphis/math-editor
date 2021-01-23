@@ -20,7 +20,7 @@ module.exports = function(grunt) {
     }
   },
 
-  sass: {
+  'dart-sass': {
     dist: {
       options: {
        style: 'expanded',
@@ -112,7 +112,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-babel');
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-dart-sass');
   grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('default', [
@@ -121,7 +121,7 @@ module.exports = function(grunt) {
     'browserify',
     'concat:lib',
     'concat:dist',
-    'sass',
+    'dart-sass',
     'concat:css',
     'copy',
   ]);
